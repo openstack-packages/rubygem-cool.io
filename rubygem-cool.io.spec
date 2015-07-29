@@ -1,9 +1,10 @@
 # Generated from cool.io-1.2.4.gem by gem2rpm -*- rpm-spec -*-
 %global gem_name cool.io
+%global optflags -O2 -g -fno-strict-aliasing
 
 Name: rubygem-%{gem_name}
 Version: 1.2.4
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: A cool framework for doing high performance I/O in Ruby
 Group: Development/Languages
 License: MIT
@@ -92,5 +93,8 @@ popd
 %{gem_instdir}/examples
 
 %changelog
+* Wed Jul 29 2015 Graeme Gillies <ggillies@redhat.com> - 1.2.4-2
+- Corrected C extension compiler flags to remove strict-aliasing warnings
+
 * Tue Jan 06 2015 Graeme Gillies <ggillies@redhat.com> - 1.2.4-1
 - Initial package
